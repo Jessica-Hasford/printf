@@ -14,3 +14,7 @@ Task12. Every time that I wanted to give up, if I saw an interesting textile, pr
 Task13. Print is the sharpest and the strongest weapon of our party
 Task14. The flood of print has turned reading into a process of gulping rather than savoring
 Task15. *
+Project done by Jessica-Hasford and Esther-gihub
+Real names; Jessica Aba Hasford
+Esther Boatemah Owusu
+Date: May 28, 2023
