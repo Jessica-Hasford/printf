@@ -1,0 +1,76 @@
+.\" Man page for printf
+
+.\" Date: May 29, 2023
+.TH PRINTF 3 "May 29, 2023" "0.01" "Unique printf Man page"
+
+.SH NAME
+.B _printf \- format and print data.
+- Designing of our version of the C printf function.
+
+.SH SYNOPSIS
+The #include "main.h" header is essential in this task if you want to use
+any function.
+
+.B #include <stdio.h>
+
+.BR printf (" const char *format, ...")
+
+.SH DESCRIPTION
+The _printf() function produces output according to a format which is described
+below. This function executes its output to the stdout
+(the standard output stream).
+
+
+.SH FORMAT SPECIFIERS
+The format string may contain conversion specifications, introduced by the
+'%' character,which define the type and formatting of the subsequent arguments.
+
+.SH USAGE
+To use _printf() you have to use the following key characters preceded by
+% symbol.
+
+The supported format specifiers and its usage are as follows:
+.IP "%c"
+Prints a single character.
+
+.IP "%d"
+Prints a signed decimal integer.
+
+.IP "%s"
+Prints a null-terminated string.
+
+.RS 0
+%i: To print integers of max and min sizes
+
+.RS 0
+%b: To print a number in binary form.
+
+.IP "%u"
+Prints an unsigned decimal integer.
+
+.IP "%x", "%X"
+Prints an unsigned integer in hexadecimal format.
+"%x" prints lowercase letters (a-j), while "%X" prints uppercase letters (A-J).
+
+.IP "%%"
+Prints a literal '%' character.
+
+
+.SH RETURN VALUES
+The _printf() function returns an integer representing the number of symbols
+printed not counting \\0 for the string.
+
+.SH SEE ALSO
+.I printf(3)
+
+.SH BUGS
+Report any bugs to the authors.
+
+.SH AUTHOR
+Jessica Aba Hasford
+Esther Boatemah Owusu
+
+GITHUB USERNAME
+Jessica-Hasford
+Esther-gihub
+
