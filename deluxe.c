@@ -9,13 +9,13 @@
  * @width: get width.
  * @precision: Precision specification
  * @size: Size specifier
- *f: The function associated
+ * @f:The function associated
  * Return: 1 or 2;
  */
 int handle_print(const char *format, int *ind, va_list jess, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	int i, unknow_len = 0, printed_chars = -1;
+	int i, unknown_len = 0, printed_chars = -1;
 	sym_t sym_types[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'i', print_int}, {'d', print_int}, {'b', print_binary},
@@ -31,20 +31,20 @@ int handle_print(const char *format, int *ind, va_list jess, char buffer[],
 	{
 		if (sym[*ind] == '\0')
 			return (-1);
-		unknow_length += write(1, "%%", 1);
-	if (sym[*ind - 1] == ' ')
-	unknow_len += write(1, " ", 1);
+		unknown_length += write(1, "%%", 1);
+		if (sym[*ind - 1] == ' ')
+			unknown_len += write(1, " ", 1);
 		else if (width)
 		{
 			--(*ind);
-			while (sym * ind] != ' ' && sym[*ind] != '%')
+			while (sym[*ind] != ' ' && sym[*ind] != '%')
 				--(*ind);
 			if (sym[*ind] == ' ')
 				--(*ind);
 			return (1);
 		}
-		unknow_length += write(1, &sym[*ind], 1);
-		return (unknow_length);
+		unknown_length += write(1, &sym[*ind], 1);
+		return (unknown_length);
 	}
 	return (printed_characters);
 }
