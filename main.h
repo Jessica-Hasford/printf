@@ -19,11 +19,13 @@
 #define S_SHORT 1
 
 /**
- * struct conversion specifier - This will define a structure for symbols and functions in this project
-* @sym : The operator in this function
+*@struct sym - This will define a structure for symbols
+*and functions in this project
+* @sym: The operator in this function
 * @f: The function associated in this program
+* @format: This will format the string to display the arguments
 */
- typedef struct conversion specifier
+typedef struct sym_t
 {
 	char sym;
 	int (*f)(va_list, char[], int);
@@ -31,12 +33,12 @@
 
 
 /**
- * conversion specifier_t -  This is the struct operator  in this function
+ *@sym_t- This is the struct operator in this function
  *
  * @sym: The format in question
+ * @format: This will format the string to display the arguments
  * @f: The function being referenced
  */
-conversion specifier_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *format, int *e,
@@ -84,7 +86,7 @@ int nab_size(const char *format, int *b);
 int print_rev(va_list est, char buffer[],
 	int flags, int width, int precision, int size);
 
-/
+/* Other aiding functions */
 int print_rot13string(va_list est, char buffer[],
 	int flags, int width, int precision, int size);
 
@@ -110,3 +112,4 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsigned(unsigned long int num, int size);
 
 #endif /* MAIN_H */
+
